@@ -1,0 +1,52 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.contenido-header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+
+    @include m.desktop {
+        display: flex;
+        flex-direction: row;
+    }
+
+    picture{
+        width: 100%;
+        max-width: 20rem;
+        min-width: 15rem;
+    }
+}
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 53rem;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include m.tablet {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .links{
+        display: flex;
+        gap: 2rem;
+    }
+
+    a{
+        color: v.$negro;
+        &:hover{
+            color: v.$amarillo-oscuro;
+        }
+    }
+
+    
+}
+
