@@ -13,12 +13,15 @@ const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin'); 
 const webp = require('gulp-webp'); 
 const avif = require('gulp-avif'); 
+const { fun } = require('./src/js/crabs');
 
 function css(done){
 
     // 1. Identificar archivo SASS
     // 2. Compilar archivo SASS
     // 3. Almacenar archivo
+
+    fun();
 
     src('src/scss/**/*.scss') // Indicamos la ruta del archivo
         .pipe(sourcemaps.init())
@@ -32,6 +35,9 @@ function css(done){
 }
 
 function imagenes(done){
+
+    fun();
+
     const opciones = {
         optimizationLevel: 3
     }
@@ -57,6 +63,8 @@ function versionWebp(done){
 
 function versionAvif(done){
 
+    fun();
+
     const opciones = {
         quality: 50
     };
@@ -69,6 +77,7 @@ function versionAvif(done){
 }
 
 function dev(done){
+    fun();
     watch("src/scss/**/*.scss", css) // Indicamos la ruta del archivo a observar y la tarea a ejecutar
     done();
 }
