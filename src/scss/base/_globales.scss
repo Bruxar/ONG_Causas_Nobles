@@ -59,8 +59,10 @@ img{
     width: 15rem;
     height: 4rem;
     background-color: v.$naranja;
-    border-radius: 1rem;
+    border-radius: .4rem;
     margin: 1rem;
+    transition: .4s;
+    border: v.$naranja 1px solid;
     cursor: pointer;
     p,a{
         color: v.$blanco !important;
@@ -68,7 +70,9 @@ img{
     }
 
     &:hover{
-        background-color: v.$naranja-oscuro;
-        transition: all .3s ease-in;
+        background-color: v.$blanco;
+        p,a{
+            color: v.$naranja !important;
+        }
     }
 }
