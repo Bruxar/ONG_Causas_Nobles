@@ -23,6 +23,7 @@
             object-fit: cover;
 
         }
+
         &::before {
             content: "";
             position: absolute;
@@ -35,6 +36,7 @@
         }
     }
 
+
     .contenido-hero {
         position: absolute;
         top: 50%;
@@ -45,19 +47,35 @@
         justify-content: center;
         align-items: center;
         color: #fff;
+        padding: 1rem;
 
         h1{
             text-transform: uppercase;
-            color: v.$naranja;
-            letter-spacing: .2rem;
+            letter-spacing: .1rem;
+            font-size: 4rem;
+            text-align: center;
         }
         p{
             color: v.$blanco;
+            font-size: 1.6rem;
+            width: 70%;
+            text-align: center;
         }
         h1, p {
-            text-align: center;
             margin: 1.5rem;
 
+        }
+
+        @include m.telefono {
+            h1{
+                font-size: 5rem;
+            }
+            p{
+                font-size: 1.8rem;
+            }
+            .contenido-hero{
+                align-items: start;
+            }
         }
     }
 }
