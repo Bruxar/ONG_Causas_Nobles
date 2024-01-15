@@ -58,11 +58,11 @@ img{
     place-content: center;
     width: 15rem;
     height: 4rem;
-    background-color: v.$naranja;
+    background-color: v.$amarillo-oscuro;
     border-radius: .4rem;
     margin: 1rem;
     transition: .4s;
-    border: v.$naranja 1px solid;
+    border: v.$amarillo-oscuro 1px solid;
     cursor: pointer;
     p,a{
         color: v.$blanco !important;
@@ -72,7 +72,7 @@ img{
     &:hover{
         background-color: v.$blanco;
         p,a{
-            color: v.$naranja !important;
+            color: v.$amarillo-oscuro !important;
         }
     }
 }
