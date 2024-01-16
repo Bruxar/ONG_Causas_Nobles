@@ -47,7 +47,7 @@
             background-color: v.$amarillo-normal; /* Color del separador */
             margin-top: 1.5rem; /* Ajusta el margen vertical según sea necesario */
             margin-bottom: 3rem;
-            transition: width .5s, background-color .5s; // Agrega la transición para el ancho y el color
+            transition: width 1s, background-color .2s; // Agrega la transición para el ancho y el color
         }
 
         h2 {
