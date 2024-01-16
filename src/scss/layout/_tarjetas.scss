@@ -1,0 +1,70 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.seccion-tarjetas {
+    @include m.grid(1, 1rem);
+    padding: 1rem;
+
+    @include m.tablet {
+        @include m.grid(2, 1rem);
+    }
+
+    @include m.desktopXL {
+        @include m.grid(4, 1rem);
+    }
+}
+
+.tarjeta {
+    background-color: v.$blanco;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
+    transition: background-color .5s;
+
+    &:hover {
+        background-color: v.$amarillo-normal;
+
+        .info-tarjeta h2,
+        .info-tarjeta p,
+        .imagen {
+            color: v.$blanco;
+            filter: grayscale(0);
+        }
+
+        .info-tarjeta .separador {
+            background-color: v.$blanco;
+            width: 100%; // Asegúrate de que el ancho sea del 100% al hacer hover
+        }
+    }
+
+    .info-tarjeta {
+        padding: 2rem;
+
+        .separador {
+            display: block;
+            width: 20%; /* Ancho inicial del separador */
+            height: 2px; /* Grosor del separador */
+            background-color: v.$amarillo-normal; /* Color del separador */
+            margin-top: 1.5rem; /* Ajusta el margen vertical según sea necesario */
+            margin-bottom: 3rem;
+            transition: width .5s, background-color .5s; // Agrega la transición para el ancho y el color
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: v.$gris-oscuro;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: v.$gris;
+        }
+    }
+
+    .imagen {
+        filter: grayscale(100%);
+        transition: .5s;
+    }
+}
